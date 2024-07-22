@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <form id="resume-form">
+                <h2>Resume Builder</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="linkedin">LinkedIn:</label>
+                <input type="url" id="linkedin" name="linkedin">
+                
+                <label for="personal-page">Personal Page:</label>
+                <input type="url" id="personal-page" name="personal-page">
+                
+                <label for="profile">Profile:</label>
+                <textarea id="profile" name="profile" required></textarea>
+                
+                <label for="technical-skills">Technical Skills:</label>
+                <textarea id="technical-skills" name="technical-skills" required></textarea>
+                
+                <h3>Experience</h3>
+                <div id="experience-section">
+                    <div class="experience-entry">
+                        <label for="job-title-1">Job Title:</label>
+                        <input type="text" id="job-title-1" name="job-title" required>
+                        
+                        <label for="company-1">Company:</label>
+                        <input type="text" id="company-1" name="company" required>
+                        
+                        <label for="job-duration-1">Duration:</label>
+                        <input type="text" id="job-duration-1" name="job-duration" required>
+                        
+                        <label for="job-description-1">Description:</label>
+                        <textarea id="job-description-1" name="job-description" required></textarea>
+                    </div>
+                </div>
+                <button type="button" id="add-experience">Add Experience</button>
+                
+                <label for="certifications">Certifications (Separate by comma):</label>
+                <textarea id="certifications" name="certifications" required></textarea>
+                
+                <label for="professional-skills">Professional Skills:</label>
+                <textarea id="professional-skills" name="professional-skills" required></textarea>
+                
+                <h3>Education</h3>
+                <div id="education-section">
+                    <div class="education-entry">
+                        <label for="education-degree-1">Degree:</label>
+                        <input type="text" id="education-degree-1" name="education-degree" required>
+                        
+                        <label for="education-college-1">College/University:</label>
+                        <input type="text" id="education-college-1" name="education-college" required>
+                        
+                        <label for="education-duration-1">Duration:</label>
+                        <input type="text" id="education-duration-1" name="education-duration" required>
+                        
+                        <label for="education-course-1">Course/Major:</label>
+                        <input type="text" id="education-course-1" name="education-course" required>
+                    </div>
+                </div>
+                <button type="button" id="add-education">Add Education</button>
+                
+                <button type="submit">Generate Resume</button>
+                <button type="button" onclick="printResume()">print PDF</button>
+                <button type="button" onclick="downloadPDF()">Download PDF</button>
+            </form>
+        </div>
+        
+        <div id="resume-output" class="resume">
+            <!-- Generated resume will be displayed here -->
+        </div>
+    </div>
+</body>
+</html>

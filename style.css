@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 12px; /* Smaller font size */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.form-container {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+form h2 {
+    text-align: center;
+    font-size: 1.2em;
+    color: #2a9d8f; /* Header color */
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 12px;
+    background-color: #2a9d8f; /* Button background color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #21867a; /* Button hover color */
+}
+
+.resume {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 12px;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #2a9d8f; /* Header color */
+}
+
+header p {
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    background: #2a9d8f;
+    color: #fff;
+    padding: 10px;
+    margin: 0px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    border-radius: 4px;
+    font-size: 1.1em;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 12px;
+}
+
+.certifications-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.certifications-part {
+    width: 48%;
+}
+
+.education-entry {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.education-entry .education-details {
+    flex: 1;
+}
+
+.education-entry .education-duration {
+    text-align: right;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Print Styles */
+@media print {
+    body {
+        margin: 0;
+    }
+    .form-container {
+        display: none;
+    }
+    .resume {
+        display: block;
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+    header h1 {
+        font-size: 1.2em;
+    }
+    section h2 {
+        background: none;
+        color: black;
+        padding: 0;
+    }
+}
